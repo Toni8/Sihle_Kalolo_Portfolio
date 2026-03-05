@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <title>Sihle Kalolo - Data Analyst & Scientist</title>
+</head>
+
+<body class="relative bg-grid">
+  <!-- Background Grid & Futuristic Orbs -->
+  <div class="fixed inset-0 pointer-events-none bg-grid opacity-20 z-[-1]"></div>
+  <div class="floating-orb orb-1"></div>
+  <div class="floating-orb orb-2"></div>
+  <div class="floating-orb orb-3"></div>
+
+  <!-- Navigation -->
+  <nav
+    class="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-dark-base/80 border-b border-white/10"
+    id="navbar">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-2xl font-display font-bold text-neon-teal tracking-tighter">SK<span
+          class="text-neon-pink">.</span></a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="text-sm font-medium hover:text-neon-blue transition-colors duration-200">The Story</a>
+        <a href="#experience" class="text-sm font-medium hover:text-neon-pink transition-colors duration-200">Impact</a>
+        <a href="#projects" class="text-sm font-medium hover:text-neon-teal transition-colors duration-200">Arsenal</a>
+        <a href="#contact" class="text-sm font-medium hover:text-white transition-colors duration-200">Connect</a>
+      </div>
+
+      <!-- Download CV Button -->
+      <a href="https://docs.google.com/document/d/1LsBnxMCapSDf9QSHy8_-A70FDC4a223H/edit?usp=drive_link&ouid=100842382347139499910&rtpof=true&sd=true"
+        target="_blank"
+        class="hidden md:flex items-center space-x-2 px-5 py-2 rounded-full border border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-base transition-all duration-300 font-medium text-sm">
+        <span>Resume</span>
+        <i class="fa-solid fa-download"></i>
+      </a>
+
+      <!-- Mobile Menu Togle -->
+      <button id="mobile-menu-btn" class="md:hidden text-gray-200 hover:text-neon-blue focus:outline-none">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu"
+      class="hidden absolute top-full left-0 w-full bg-dark-surface/95 backdrop-blur-lg border-b border-white/10 shadow-xl flex-col divide-y divide-white/5">
+      <a href="#about" class="px-6 py-4 text-sm font-medium hover:text-neon-blue hover:bg-white/5 transition-colors">The
+        Story</a>
+      <a href="#experience"
+        class="px-6 py-4 text-sm font-medium hover:text-neon-pink hover:bg-white/5 transition-colors">Impact</a>
+      <a href="#projects"
+        class="px-6 py-4 text-sm font-medium hover:text-neon-teal hover:bg-white/5 transition-colors">Arsenal</a>
+      <a href="#contact"
+        class="px-6 py-4 text-sm font-medium hover:text-white hover:bg-white/5 transition-colors">Connect</a>
+    </div>
+  </nav>
+
+  <!-- Main Content wrapper -->
+  <main class="relative z-10 w-full">
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <!-- Abstract background shapes for hero -->
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-neon-blue/20 rounded-full blur-[100px] animate-float"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-pink/10 rounded-full blur-[120px] animate-float"
+          style="animation-delay: 2s;"></div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-6 relative z-10 w-full flex flex-col md:flex-row items-center justify-between gap-12">
+
+        <div class="w-full md:w-3/5 space-y-8 animate-[fadeInUp_1s_ease-out_forwards]">
+          <div
+            class="inline-block px-4 py-1 rounded-full border border-neon-teal/30 bg-neon-teal/10 text-neon-teal text-xs font-mono font-medium tracking-wider mb-2">
+            AVAILABLE FOR OPPORTUNITIES
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-display font-bold leading-tight">
+            <span class="block">Sihle <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-teal">Kalolo</span></span>
+          </h1>
+
+          <h2 class="text-2xl md:text-3xl text-gray-300 font-medium">
+            Data Analyst & Scientist <span class="text-neon-pink mx-2">|</span> Turning Disruption into Insight
+          </h2>
+
+          <p class="text-lg md:text-xl text-gray-400 max-w-2xl font-light leading-relaxed">
+            Curious. Resilient. Mission-Driven. I help purpose-led teams find clarity in complex data.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="#projects"
+              class="px-8 py-3 rounded bg-neon-teal text-dark-base font-bold tracking-wide hover:bg-white hover:shadow-[0_0_20px_rgba(0,242,254,0.6)] transition-all duration-300">
+              View My Work
+            </a>
+            <a href="#contact"
+              class="px-8 py-3 rounded border border-gray-600 text-gray-300 font-bold tracking-wide hover:border-neon-pink hover:text-neon-pink hover:bg-neon-pink/10 transition-all duration-300">
+              Connect With Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Image Area -->
+        <div class="w-full md:w-2/5 flex justify-center relative animate-[fadeInUp_1s_ease-out_forwards]"
+          style="animation-delay: 0.3s;">
+          <div class="relative w-72 h-72 md:w-96 md:h-96">
+            <!-- Glowing Border Effect behind image -->
+            <div
+              class="absolute inset-0 rounded-full bg-gradient-to-tr from-neon-blue via-neon-teal to-neon-pink animate-[spin_10s_linear_infinite] opacity-50 blur-xl">
+            </div>
+            <div class="absolute inset-1 rounded-full bg-dark-base overflow-hidden border-2 border-white/10 z-10">
+              <!-- Actual profile image -->
+              <img src="/Sihle-Image.jpg" alt="Sihle Kalolo" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="min-h-screen py-24 relative overflow-hidden section-hover-glow">
+      <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <div class="mb-16 md:mb-24 animate-[fadeInUp_1s_ease-out_forwards]">
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 transition-all duration-500">
+            My Path: <span class="text-neon-pink">From Disruption to Discovery</span>
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-neon-blue to-neon-pink rounded-full line-accent transition-all duration-500">
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-12 lg:gap-24 relative">
+          <!-- Timeline Graphic (Left Column) -->
+          <div class="w-full md:w-5/12 relative pl-8 md:pl-0 sm:min-h-[400px]">
+            <!-- Main timeline line -->
+            <div class="timeline-line"></div>
+
+            <div class="relative z-10 space-y-16">
+              <!-- Node 1: UFH -->
+              <div class="relative md:text-right md:pr-12 group">
+                <!-- Dot -->
+                <div
+                  class="absolute left-[-32px] md:left-auto md:right-[-6px] top-6 w-3 h-3 bg-neon-blue rounded-full shadow-[0_0_15px_rgba(0,229,255,0.8)] z-20 group-hover:scale-150 transition-transform">
+                </div>
+                <div class="glass-card p-6 rounded-xl relative overflow-hidden">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-neon-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  </div>
+                  <h3 class="font-display font-bold text-lg text-white">BSc Computer Science & Applied Math</h3>
+                  <p class="text-neon-blue font-mono text-sm mt-1">University of Fort Hare</p>
+                </div>
+              </div>
+
+              <!-- Node 2: The Disruption -->
+              <div class="relative md:text-center flex justify-start md:justify-center group mt-4 mb-4">
+                <div
+                  class="absolute left-[-36px] md:left-1/2 md:-translate-x-1/2 top-4 w-5 h-5 bg-dark-base border-2 border-neon-pink rounded shadow-[0_0_20px_rgba(255,0,127,0.8)] z-20 flex items-center justify-center group-hover:bg-neon-pink group-hover:text-dark-base transition-colors">
+                  <i class="fa-solid fa-bolt text-[10px]"></i>
+                </div>
+                <div class="md:bg-transparent pl-4 md:pl-0 pt-2 opacity-80 animate-pulse">
+                  <p class="text-neon-pink font-mono text-sm tracking-wider font-bold">SEPTEMBER 2021: DISRUPTION</p>
+                </div>
+              </div>
+
+              <!-- Nodes 3 & 4 (The Split) -->
+              <div class="relative pl-0 md:pl-12 flex flex-col sm:flex-row gap-6 justify-center">
+                <!-- Branch left/right visual for desktop -->
+                <div
+                  class="hidden md:block absolute left-1/2 top-[-40px] w-[50%] h-[60px] border-l-2 border-b-2 border-t-0 border-r-0 border-neon-teal/50 rounded-bl-3xl z-0"
+                  style="left: 0;"></div>
+                <div
+                  class="hidden md:block absolute left-1/2 top-[-40px] w-[50%] h-[60px] border-r-2 border-b-2 border-t-0 border-l-0 border-neon-blue/50 rounded-br-3xl z-0">
+                </div>
+
+                <div class="w-full sm:w-1/2 relative group">
+                  <div
+                    class="absolute left-[-32px] md:left-auto md:top-[-10px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-neon-teal rounded-full shadow-[0_0_15px_rgba(0,242,254,0.8)] z-20 group-hover:scale-150 transition-transform hidden md:block">
+                  </div>
+                  <div
+                    class="glass-card p-5 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="font-display font-bold text-white text-md">WeThinkCode_</h3>
+                    <p class="text-neon-teal font-mono text-[11px] mt-1">Software Engineering</p>
+                  </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 relative group">
+                  <div
+                    class="absolute left-[-32px] md:left-auto md:top-[-10px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-neon-blue rounded-full shadow-[0_0_15px_rgba(0,229,255,0.8)] z-20 group-hover:scale-150 transition-transform hidden md:block">
+                  </div>
+                  <div
+                    class="glass-card p-5 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="font-display font-bold text-white text-md">ExploreAI Academy</h3>
+                    <p class="text-neon-blue font-mono text-[11px] mt-1">Data Science</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Node 5: Convergence -->
+              <div class="relative md:text-center flex justify-start md:justify-center group mt-8">
+                <div
+                  class="absolute left-[-34px] md:left-1/2 md:-translate-x-1/2 top-4 w-4 h-4 bg-neon-teal rounded-full shadow-[0_0_20px_rgba(0,242,254,1)] z-20 group-hover:scale-125 transition-transform">
+                </div>
+                <!-- Converge lines visual for desktop -->
+                <div
+                  class="hidden md:block absolute left-1/2 top-[-30px] w-[50%] h-[40px] border-l-2 border-t-2 border-b-0 border-r-0 border-neon-teal/50 rounded-tl-3xl z-0"
+                  style="left: 0;"></div>
+                <div
+                  class="hidden md:block absolute left-1/2 top-[-30px] w-[50%] h-[40px] border-r-2 border-t-2 border-b-0 border-l-0 border-neon-blue/50 rounded-tr-3xl z-0">
+                </div>
+
+                <div
+                  class="glass-card-hover glass-card px-8 py-4 rounded-full mt-2 inline-block relative z-10 w-full md:w-auto text-center md:text-left mx-auto">
+                  <h3 class="font-display font-bold text-white">Sand Technology</h3>
+                  <p class="text-neon-teal font-mono text-xs mt-1">Data Analyst</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Text Content (Right Column) -->
+          <div class="w-full md:w-7/12 space-y-6 text-gray-400 leading-relaxed text-lg">
+            <p class="animate-[fadeInUp_1s_ease-out_0.2s_forwards] opacity-0">
+              My journey into data wasn't a straight line. I was deep into my final year for a BSc in Computer Science
+              and Mathematics at the University of Fort Hare, driven by a love for solving puzzles. But in September
+              2021, a tragic car accident brought everything to a sudden halt, leaving my final semester incomplete.
+            </p>
+            <p class="animate-[fadeInUp_1s_ease-out_0.4s_forwards] opacity-0">
+              In the aftermath, I found myself at a crossroads. The disruption, however, became a powerful moment of
+              redirection. It forced me to ask not just <em>&#39;why?&#39;</em>, but <strong>&#39;what's
+                next?&#39;</strong>. I channeled that curiosity and resilience into two of the most intensive, hands-on
+              programs I could find: <span class="text-neon-blue font-medium">WeThinkCode_</span> and the <span
+                class="text-neon-teal font-medium">ExploreAI Academy</span>.
+            </p>
+            <div
+              class="p-6 border border-white/10 rounded-2xl bg-dark-surface/30 backdrop-blur-sm relative overflow-hidden animate-[fadeInUp_1s_ease-out_0.6s_forwards] opacity-0 group">
+              <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-neon-blue to-neon-pink"></div>
+              <p class="relative z-10 text-gray-300">
+                There, I discovered my true passion: using data not just for theory, but for real-world impact. I
+                learned to wrangle unruly data, build predictive models, and visualize insights that help humans make
+                better decisions.
+              </p>
+              <p class="relative z-10 text-white font-medium mt-4 text-xl">
+                That car accident didn't end my story; it gave it a new, more focused direction. <span
+                  class="text-neon-pink">Now, I'm on a mission to help others find signal in the noise.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="min-h-screen py-24 relative overflow-hidden bg-dark-base/50 section-hover-glow">
+      <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <div class="mb-16 md:mb-24 text-center md:text-left transition-all duration-500">
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">
+            Selected Work: <span class="text-neon-teal">Driving Impact with Data</span>
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-neon-teal to-neon-blue rounded-full mx-auto md:mx-0 line-accent transition-all duration-500">
+          </div>
+        </div>
+
+        <!-- Featured Project Box -->
+        <div class="glass-card rounded-2xl p-1 overflow-hidden relative group">
+          <!-- Glowing rotating border effect -->
+          <div
+            class="absolute -inset-1 bg-gradient-to-r from-neon-blue via-neon-teal to-neon-pink rounded-2xl opacity-20 group-hover:opacity-60 blur transition duration-500 group-hover:duration-200 animate-[spin_4s_linear_infinite]">
+          </div>
+
+          <div class="relative bg-dark-surface rounded-xl p-8 lg:p-12 z-10">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12">
+              <div>
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-neon-blue font-mono text-sm tracking-wide font-bold">Sand Technology / Thames
+                    Water</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-display font-bold text-white">Predicting River Health for Thames
+                  Water</h3>
+              </div>
+              <div
+                class="inline-flex px-4 py-2 rounded-full border border-neon-teal/30 bg-neon-teal/10 text-neon-teal text-sm font-mono whitespace-nowrap">
+                Featured Project <i class="fa-solid fa-star ml-2"></i>
+              </div>
+            </div>
+
+            <!-- Metrics Banner -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div class="text-center p-4 border border-white/5 rounded-lg bg-dark-base/50">
+                <i class="fa-solid fa-database text-neon-blue text-2xl mb-3"></i>
+                <p class="text-3xl font-bold text-white mb-1">1.5M+</p>
+                <p class="text-xs font-mono text-gray-400">Monthly Records</p>
+              </div>
+              <div class="text-center p-4 border border-white/5 rounded-lg bg-dark-base/50">
+                <i class="fa-solid fa-location-dot text-neon-teal text-2xl mb-3"></i>
+                <p class="text-3xl font-bold text-white mb-1">50+</p>
+                <p class="text-xs font-mono text-gray-400">Monitoring Stations</p>
+              </div>
+              <div class="text-center p-4 border border-white/5 rounded-lg bg-dark-base/50">
+                <i class="fa-solid fa-stopwatch text-neon-pink text-2xl mb-3"></i>
+                <p class="text-3xl font-bold text-white mb-1">85%</p>
+                <p class="text-xs font-mono text-gray-400">Faster Reporting (5d→3h)</p>
+              </div>
+              <div class="text-center p-4 border border-white/5 rounded-lg bg-dark-base/50">
+                <i class="fa-solid fa-arrow-trend-down text-neon-blue text-2xl mb-3"></i>
+                <p class="text-3xl font-bold text-white mb-1">25%</p>
+                <p class="text-xs font-mono text-gray-400">↓ Incident Risk</p>
+              </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="space-y-6 text-gray-300">
+              <div class="flex gap-4 items-start">
+                <div
+                  class="mt-1 w-10 h-10 rounded-full bg-neon-blue/10 flex items-center justify-center shrink-0 border border-neon-blue/30 text-neon-blue">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <p class="leading-relaxed">
+                  <strong class="text-white font-medium">Complex SQL Engineering:</strong> Wrote complex SQL queries to
+                  analyze data from 50+ stations and 12 field scientists, uncovering patterns in water quality and
+                  sewage discharge risks.
+                </p>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="mt-1 w-10 h-10 rounded-full bg-neon-teal/10 flex items-center justify-center shrink-0 border border-neon-teal/30 text-neon-teal">
+                  <i class="fa-solid fa-chart-bar"></i>
+                </div>
+                <p class="leading-relaxed">
+                  <strong class="text-white font-medium">Dashboard Automation:</strong> Built interactive Power BI
+                  dashboards for 30+ field teams, slashing manual reporting time from 5 days to 3 hours.
+                </p>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="mt-1 w-10 h-10 rounded-full bg-neon-pink/10 flex items-center justify-center shrink-0 border border-neon-pink/30 text-neon-pink">
+                  <i class="fa-solid fa-broom"></i>
+                </div>
+                <p class="leading-relaxed">
+                  <strong class="text-white font-medium">Data Hygiene:</strong> Championed data hygiene by validating
+                  datasets and correcting 8,500+ inconsistencies, ensuring stakeholders could trust the insights.
+                </p>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="mt-1 w-10 h-10 rounded-full bg-gradient-to-tr from-neon-blue to-neon-teal opacity-80 flex items-center justify-center shrink-0 text-dark-base shadow-[0_0_15px_rgba(0,242,254,0.5)]">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <p class="leading-relaxed">
+                  <strong class="text-white font-medium">Predictive Intelligence:</strong> Identified trends that
+                  enabled predicting sewage discharge events up to 48 hours in advance, leading to proactive
+                  interventions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Mentor Box -->
+        <div
+          class="glass-card rounded-2xl p-1 overflow-hidden relative group mt-12 animate-[fadeInUp_1s_ease-out_forwards]">
+          <div
+            class="absolute -inset-1 bg-gradient-to-r from-neon-pink via-neon-teal to-neon-blue rounded-2xl opacity-10 group-hover:opacity-40 blur transition duration-500 group-hover:duration-200">
+          </div>
+
+          <div class="relative bg-dark-surface rounded-xl p-8 lg:p-12 z-10">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-8 mb-8">
+              <div>
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-neon-pink font-mono text-sm tracking-wide font-bold">WeThinkCode_ (2023
+                    Cohort)</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-display font-bold text-white">Technical Mentor</h3>
+              </div>
+            </div>
+
+            <div class="space-y-4 text-gray-300">
+              <p class="text-neon-pink font-medium">Chosen among a select group of mentors to guide and shape the career
+                paths of future tech professionals.</p>
+              <ul class="space-y-3 list-none pl-0">
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-chevron-right text-neon-teal mt-1 text-xs"></i>
+                  <span>Selected to serve as a Technical Mentor for the 2023 Cohort, contributing expertise in Python
+                    programming.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-chevron-right text-neon-teal mt-1 text-xs"></i>
+                  <span>Providing guidance, support, and insights to students, fostering their technical and
+                    professional growth.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-chevron-right text-neon-teal mt-1 text-xs"></i>
+                  <span>Collaborating with fellow mentors to create impactful learning experiences and workshops.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-chevron-right text-neon-teal mt-1 text-xs"></i>
+                  <span>Facilitating induction and training sessions to equip students with essential skills for success
+                    in the tech industry.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="min-h-screen py-24 relative overflow-hidden section-hover-glow">
+      <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <div class="mb-16 md:mb-24 text-center">
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 transition-all duration-500">
+            Data Playground: <span class="text-neon-blue">Real Problems, Real Code</span>
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-neon-blue to-neon-teal rounded-full mx-auto line-accent transition-all duration-500">
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Project 1: Vegetable-Prices -->
+          <div class="glass-card-hover glass-card rounded-2xl p-6 flex flex-col h-full group">
+            <div
+              class="w-14 h-14 rounded-full bg-neon-blue/10 flex items-center justify-center text-neon-blue text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-carrot"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-3">Vegetable-Prices</h3>
+            <p class="text-gray-400 text-sm flex-grow mb-6 leading-relaxed">
+              Vegetable Price Analysis and Forecasting – analyzes historical vegetable prices across various regions to
+              identify key trends and regional disparities using machine learning techniques.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Python</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Jupyter</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Forecasting</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">EDA</span>
+            </div>
+            <a href="https://github.com/Toni8/Vegetable-Prices" target="_blank"
+              class="w-full block text-center py-3 rounded border border-neon-blue/50 text-neon-blue text-sm font-bold tracking-wide hover:bg-neon-blue hover:text-dark-base transition-colors mt-auto">
+              <i class="fa-brands fa-github mr-2"></i> View on GitHub
+            </a>
+          </div>
+
+          <!-- Project 2: Pizza-Sales -->
+          <div class="glass-card-hover glass-card rounded-2xl p-6 flex flex-col h-full group">
+            <div
+              class="w-14 h-14 rounded-full bg-neon-pink/10 flex items-center justify-center text-neon-pink text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-pizza-slice"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-3">Pizza-Sales</h3>
+            <p class="text-gray-400 text-sm flex-grow mb-6 leading-relaxed">
+              Interactive Pizza Sales Analysis dashboard built with Tableau.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Tableau</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Data Visualization</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Sales Analytics</span>
+            </div>
+            <a href="https://github.com/Toni8/Pizza-Sales" target="_blank"
+              class="w-full block text-center py-3 rounded border border-neon-pink/50 text-neon-pink text-sm font-bold tracking-wide hover:bg-neon-pink hover:text-dark-base transition-colors mt-auto">
+              <i class="fa-brands fa-github mr-2"></i> View on GitHub
+            </a>
+          </div>
+
+          <!-- Project 3: Supermarket-sales -->
+          <div class="glass-card-hover glass-card rounded-2xl p-6 flex flex-col h-full group">
+            <div
+              class="w-14 h-14 rounded-full bg-neon-teal/10 flex items-center justify-center text-neon-teal text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-3">Supermarket-sales</h3>
+            <p class="text-gray-400 text-sm flex-grow mb-6 leading-relaxed">
+              Analyzes 3-month sales data from 3 supermarket branches. Uses MySQL for data cleaning, Power BI for
+              visualization, and predictive analytics to identify trends and forecast sales.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">MySQL</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Power BI</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Python</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Predictive Modeling</span>
+            </div>
+            <a href="https://github.com/Toni8/Supermarket-sales" target="_blank"
+              class="w-full block text-center py-3 rounded border border-neon-teal/50 text-neon-teal text-sm font-bold tracking-wide hover:bg-neon-teal hover:text-dark-base transition-colors mt-auto">
+              <i class="fa-brands fa-github mr-2"></i> View on GitHub
+            </a>
+          </div>
+
+          <!-- Project 4: House-Prices -->
+          <div class="glass-card-hover glass-card rounded-2xl p-6 flex flex-col h-full group">
+            <div
+              class="w-14 h-14 rounded-full bg-neon-blue/10 flex items-center justify-center text-neon-blue text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-3">House-Prices</h3>
+            <p class="text-gray-400 text-sm flex-grow mb-6 leading-relaxed">
+              Predict sales prices with feature engineering, random forests, and gradient boosting.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Python</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Scikit-learn</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Regression</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Feature Engineering</span>
+            </div>
+            <a href="https://github.com/Toni8/House-Prices---Advanced-Regression-Techniques" target="_blank"
+              class="w-full block text-center py-3 rounded border border-neon-blue/50 text-neon-blue text-sm font-bold tracking-wide hover:bg-neon-blue hover:text-dark-base transition-colors mt-auto">
+              <i class="fa-brands fa-github mr-2"></i> View on GitHub
+            </a>
+          </div>
+
+          <!-- Project 5: Titanic -->
+          <div class="glass-card-hover glass-card rounded-2xl p-6 flex flex-col h-full group">
+            <div
+              class="w-14 h-14 rounded-full bg-neon-pink/10 flex items-center justify-center text-neon-pink text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-ship"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-3">Titanic Survival</h3>
+            <p class="text-gray-400 text-sm flex-grow mb-6 leading-relaxed">
+              Classic Titanic survival prediction using classification algorithms.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Python</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Classification</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Logistic Regression</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">EDA</span>
+            </div>
+            <a href="https://github.com/Toni8/Titanic---Machine-Learning-from-Disaster" target="_blank"
+              class="w-full block text-center py-3 rounded border border-neon-pink/50 text-neon-pink text-sm font-bold tracking-wide hover:bg-neon-pink hover:text-dark-base transition-colors mt-auto">
+              <i class="fa-brands fa-github mr-2"></i> View on GitHub
+            </a>
+          </div>
+
+          <!-- Project 6: Spaceship-Titanic -->
+          <div class="glass-card-hover glass-card rounded-2xl p-6 flex flex-col h-full group">
+            <div
+              class="w-14 h-14 rounded-full bg-neon-teal/10 flex items-center justify-center text-neon-teal text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-3">Spaceship-Titanic</h3>
+            <p class="text-gray-400 text-sm flex-grow mb-6 leading-relaxed">
+              Predict which passengers are transported to an alternate dimension (Kaggle competition-style).
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Python</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Machine Learning</span>
+              <span class="px-3 py-1 text-[11px] font-mono rounded bg-white/5 text-gray-300">Classification</span>
+            </div>
+            <a href="https://github.com/Toni8/Spaceship-Titanic" target="_blank"
+              class="w-full block text-center py-3 rounded border border-neon-teal/50 text-neon-teal text-sm font-bold tracking-wide hover:bg-neon-teal hover:text-dark-base transition-colors mt-auto">
+              <i class="fa-brands fa-github mr-2"></i> View on GitHub
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SKILLS / TECHNICAL ARSENAL SECTION -->
+      <div class="max-w-7xl mx-auto px-6 relative z-10 w-full mt-32">
+        <div class="mb-16 text-center">
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">
+            Tools & <span class="text-neon-pink">Technologies</span>
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-neon-pink to-neon-blue rounded-full mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Category 1 -->
+          <div class="glass-card rounded-xl p-6">
+            <h4 class="text-white font-display font-bold text-lg mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-server text-neon-blue"></i> Data Querying
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Advanced
+                SQL</span>
+              <span class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">CTEs &
+                Windows</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">BigQuery</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Database
+                Exploration</span>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="glass-card rounded-xl p-6">
+            <h4 class="text-white font-display font-bold text-lg mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-microchip text-neon-pink"></i> Data Science
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Python</span>
+              <span class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Pandas
+                & NumPy</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">EDA</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Machine
+                Learning</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Stats</span>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="glass-card rounded-xl p-6">
+            <h4 class="text-white font-display font-bold text-lg mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-chart-pie text-neon-teal"></i> Visualization
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Power
+                BI</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Tableau</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">LookerStudio</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Matplotlib</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Excel</span>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="glass-card rounded-xl p-6">
+            <h4 class="text-white font-display font-bold text-lg mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-cloud text-gray-400"></i> Cloud & Core
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">AWS
+                (S3)</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Git</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Storytelling</span>
+              <span class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Data
+                Cleaning</span>
+              <span
+                class="px-3 py-1.5 text-xs font-mono rounded bg-white/5 text-gray-300 border border-white/10">Agile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CERTIFICATES SECTION -->
+      <div id="certificates" class="max-w-7xl mx-auto px-6 relative z-10 w-full mt-32 section-hover-glow">
+        <div class="mb-16 text-center">
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 transition-all duration-500">
+            Verified <span class="text-neon-teal">Credentials</span>
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-neon-teal to-neon-blue rounded-full mx-auto line-accent transition-all duration-500">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">SQL(Basic) - HackerRank</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">Git Course Intermediate - WildLearner</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">Python(Basic) - HackerRank</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">Java Programming - Sololearn</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">Introduction to SQL - Sololearn</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">Motheo 1.0 - Momentum</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">Python (Intermediate) - WildLearner</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">SQL Intermediate - Sololearn</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">Java(Basic) - HackerRank</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">Python Core - Sololearn</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">Java Course - Coursera</span>
+          </div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-neon-blue/50 transition-colors">
+            <i class="fa-solid fa-scroll text-neon-blue"></i>
+            <span class="text-gray-300 text-sm">Python Programming - Sololearn</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="min-h-screen py-24 relative overflow-hidden bg-dark-base/50 section-hover-glow">
+      <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <div class="mb-16 md:mb-24 text-center">
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 transition-all duration-500">
+            Continuous <span class="text-neon-teal">Learning</span>
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-neon-teal to-neon-blue rounded-full mx-auto line-accent transition-all duration-500">
+          </div>
+        </div>
+
+        <div class="space-y-8 max-w-4xl mx-auto">
+          <!-- University of Fort Hare -->
+          <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-1 h-full bg-neon-blue"></div>
+            <div class="flex flex-col md:flex-row gap-6 justify-between md:items-center mb-4">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded bg-white p-1 flex items-center justify-center shrink-0">
+                  <img src="/UFH_LOGO.png" alt="UFH Logo" class="max-w-full max-h-full">
+                </div>
+                <div>
+                  <h3 class="text-2xl font-display font-bold text-white">University of Fort Hare</h3>
+                  <p class="text-neon-blue font-mono text-sm mt-1">Bachelor of Science (Computer Science & Applied
+                    Mathematics)</p>
+                </div>
+              </div>
+              <div
+                class="px-4 py-1.5 rounded-full border border-white/10 bg-dark-base text-gray-400 text-sm font-mono whitespace-nowrap">
+                2018–2021
+              </div>
+            </div>
+            <p class="text-gray-400 leading-relaxed">
+              Coursework completed through September 2021. Achieved multiple distinctions, including 96% for Geometry
+              and 81% for Computer Literacy.
+            </p>
+          </div>
+
+          <!-- WeThinkCode_ -->
+          <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-1 h-full bg-neon-pink"></div>
+            <div class="flex flex-col md:flex-row gap-6 justify-between md:items-center mb-4">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded bg-white p-1 flex items-center justify-center shrink-0">
+                  <img src="/Wethinkcode_LOGO.png" alt="WTC Logo" class="max-w-full max-h-full">
+                </div>
+                <div>
+                  <h3 class="text-2xl font-display font-bold text-white">WeThinkCode_</h3>
+                  <p class="text-neon-pink font-mono text-sm mt-1">Software Engineering Programme | <span
+                      class="text-gray-400 font-sans text-xs">NQF Level 5</span></p>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-400 leading-relaxed italic border-l-2 border-white/5 pl-4">
+              Intensive, peer-led learning focused on practical application. Final Score: 4.18.
+            </p>
+          </div>
+
+          <!-- ExploreAI Academy -->
+          <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-1 h-full bg-neon-teal"></div>
+            <div class="flex flex-col md:flex-row gap-6 justify-between md:items-center mb-4">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded bg-white p-1 flex items-center justify-center shrink-0">
+                  <img src="/ExploreAI_Academy_LOGO.png" alt="Explore Logo" class="max-w-full max-h-full">
+                </div>
+                <div>
+                  <h3 class="text-2xl font-display font-bold text-white">ExploreAI Academy</h3>
+                  <p class="text-neon-teal font-mono text-sm mt-1">Data Science Programme</p>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-400 leading-relaxed mb-4">
+              Focused on applied data science, machine learning, and advanced analytics.
+            </p>
+            <div class="bg-dark-base p-4 rounded-lg border border-white/5 inline-block">
+              <p class="text-sm text-gray-300 font-medium mb-1">QCTO Statement of Results (118708)</p>
+              <p class="text-xs text-gray-500 font-mono italic">Completed multiple Data Science modules (PM-02 to PM-10,
+                WM-01 to WM-04).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="min-h-[70vh] py-24 relative overflow-hidden flex items-center">
+      <div
+        class="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-neon-pink/10 rounded-full blur-[120px] pointer-events-none">
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10 w-full text-center">
+        <h2 class="text-4xl md:text-6xl font-display font-bold text-white mb-8">
+          Ready to find clarity in the chaos?
+        </h2>
+
+        <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+          Let's turn your raw data into actionable insights. I am currently open for opportunities in South Africa
+          (Hybrid/Remote/On-site).
+        </p>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
+          <a href="mailto:kalolohlesi@gmail.com"
+            class="group flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-dark-surface border border-neon-teal/30 hover:bg-neon-teal hover:border-transparent transition-all duration-300 w-full md:w-auto">
+            <i class="fa-solid fa-envelope text-neon-teal group-hover:text-dark-base text-xl"></i>
+            <span class="font-mono text-gray-300 group-hover:text-dark-base font-bold">kalolohlesi@gmail.com</span>
+          </a>
+
+          <a href="tel:+27634332340"
+            class="group flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-dark-surface border border-neon-blue/30 hover:bg-neon-blue hover:border-transparent transition-all duration-300 w-full md:w-auto">
+            <i class="fa-solid fa-phone text-neon-blue group-hover:text-dark-base text-xl"></i>
+            <span class="font-mono text-gray-300 group-hover:text-dark-base font-bold">+27 63 433 2340</span>
+          </a>
+        </div>
+
+        <div class="flex justify-center gap-6">
+          <a href="https://github.com/Toni8?tab=repositories" target="_blank"
+            class="w-16 h-16 rounded-full glass-card flex items-center justify-center text-gray-300 hover:text-white hover:border-neon-pink hover:shadow-[0_0_20px_rgba(255,0,127,0.4)] hover:-translate-y-1 transition-all">
+            <i class="fa-brands fa-github text-3xl"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-dark-base py-8 relative z-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-gray-500 font-mono text-sm">
+        © <span id="year"></span> Sihle Kalolo — Turning Disruption into Insight.
+      </p>
+    </div>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    // Simple Mobile Menu Toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    });
+    // Close mobile menu on link click
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+      });
+    });
+  </script>
+</body>
+
+</html>
