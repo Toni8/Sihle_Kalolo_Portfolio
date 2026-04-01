@@ -434,6 +434,91 @@
           </div>
         </div>
 
+        <!-- Featured Project: Predictive Crime Hotspot -->
+        <div class="glass-card-hover glass-card rounded-2xl p-8 mb-12 flex flex-col lg:flex-row gap-8 group relative overflow-hidden">
+            <!-- Background Icons/Visuals -->
+            <div class="absolute -right-10 -bottom-10 opacity-5 text-9xl text-neon-pink group-hover:scale-110 transition-transform duration-700 pointer-events-none">
+                <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="absolute right-1/3 top-10 opacity-5 text-7xl text-neon-blue group-hover:-translate-y-4 transition-transform duration-700 pointer-events-none">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            
+            <div class="lg:w-1/2 flex flex-col pr-0 lg:pr-8 border-b lg:border-b-0 lg:border-r border-white/10 pb-8 lg:pb-0 z-10">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-full bg-neon-pink/10 flex items-center justify-center text-neon-pink text-3xl group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(255,0,127,0.3)]">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full border border-neon-pink/30 bg-neon-pink/10 text-neon-pink text-[10px] font-mono tracking-wider mb-2">
+                            DATA SCIENCE &middot; ML &middot; PREDICTIVE ANALYTICS
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-display font-bold text-white">Predictive Crime Hotspot Modeling</h3>
+                    </div>
+                </div>
+                
+                <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                    <strong>Overview:</strong> Built a machine learning solution to forecast future crime counts at police station level, enabling proactive resource allocation and early identification of high-risk crime hotspots.
+                </p>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed flex-grow">
+                    This project focuses on predicting future crime trends using historical SAPS station-level data (2008–2023). I designed an end-to-end data pipeline starting with SQL-based extraction and aggregation, followed by advanced feature engineering. I developed and combined three models—Random Forest, XGBoost, and LightGBM—into an ensemble to capture temporal and spatial patterns.
+                </p>
+                
+                <div class="p-4 border-l-4 border-neon-pink bg-gradient-to-r from-neon-pink/10 to-transparent rounded-r-lg">
+                    <p class="text-sm text-gray-200 italic font-medium">
+                         <i class="fa-solid fa-bolt text-neon-pink mr-2"></i>"Achieved high predictive accuracy with MAE ~200 crimes per station-year, enabling actionable forecasting for real-world policing strategies."
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 flex flex-col justify-between z-10">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                    <!-- Key Features -->
+                    <div class="glass-card bg-dark-base/50 p-5 rounded-xl border border-white/5">
+                        <h4 class="text-white font-bold mb-4 flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-robot text-neon-teal"></i> Key Features
+                        </h4>
+                        <ul class="space-y-3 text-gray-400 text-xs leading-relaxed">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-neon-teal mt-1"></i><span>Forecasted station-level crime with ML ensemble</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-neon-teal mt-1"></i><span>Engineered lag, rolling averages & clustering</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-neon-teal mt-1"></i><span>Identified high-risk stations (top 20%)</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-neon-teal mt-1"></i><span>Generated 2024 forecasts for planning</span></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Business Impact -->
+                    <div class="glass-card bg-dark-base/50 p-5 rounded-xl border border-white/5">
+                        <h4 class="text-white font-bold mb-4 flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-bullseye text-neon-blue"></i> Business Impact
+                        </h4>
+                        <ul class="space-y-3 text-gray-400 text-xs leading-relaxed">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-neon-blue mt-1"></i><span>Enables proactive vs reactive policing</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-neon-blue mt-1"></i><span>Efficient resource & patrol allocation</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-neon-blue mt-1"></i><span>Early identification of emerging hotspots</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-arrow-right text-neon-blue mt-1"></i><span>Data-driven public safety strategy</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1.5 text-[11px] font-mono rounded bg-dark-base text-gray-300 border border-white/10 shadow-[0_0_10px_rgba(255,0,127,0.1)]">Python</span>
+                        <span class="px-3 py-1.5 text-[11px] font-mono rounded bg-dark-base text-gray-300 border border-white/10 shadow-[0_0_10px_rgba(255,0,127,0.1)]">XGBoost & LightGBM</span>
+                        <span class="px-3 py-1.5 text-[11px] font-mono rounded bg-dark-base text-gray-300 border border-white/10 shadow-[0_0_10px_rgba(255,0,127,0.1)]">SQL</span>
+                        <span class="px-3 py-1.5 text-[11px] font-mono rounded bg-dark-base text-gray-300 border border-white/10 shadow-[0_0_10px_rgba(255,0,127,0.1)]">Power BI</span>
+                        <span class="px-3 py-1.5 text-[11px] font-mono rounded bg-dark-base text-gray-300 border border-white/10 shadow-[0_0_10px_rgba(255,0,127,0.1)]">Machine Learning</span>
+                        <span class="px-3 py-1.5 text-[11px] font-mono rounded bg-dark-base text-gray-300 border border-white/10 shadow-[0_0_10px_rgba(255,0,127,0.1)]">Predictive Modeling</span>
+                        <span class="px-3 py-1.5 text-[11px] font-mono rounded bg-dark-base text-gray-300 border border-white/10 shadow-[0_0_10px_rgba(255,0,127,0.1)]">Crime Analytics</span>
+                        <span class="px-3 py-1.5 text-[11px] font-mono rounded bg-dark-base text-gray-300 border border-white/10 shadow-[0_0_10px_rgba(255,0,127,0.1)]">Geospatial</span>
+                    </div>
+                    <a href="https://github.com/Toni8/saps_crime_project" target="_blank"
+                        class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 rounded border border-neon-pink/50 text-neon-pink text-sm font-bold tracking-wide hover:bg-neon-pink hover:text-dark-base transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(255,0,127,0.4)]">
+                        <i class="fa-brands fa-github mr-2"></i> Explore Project Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <!-- Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
