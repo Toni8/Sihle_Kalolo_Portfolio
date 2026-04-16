@@ -25,15 +25,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 3. Navbar Background blur on Scroll ---
+  // --- 3. Navbar Background blur & Scroll Indicator Hide on Scroll ---
   const navbar = document.getElementById('navbar');
+  const scrollIndicator = document.getElementById('scroll-indicator');
+
   window.addEventListener('scroll', () => {
+    // Navbar background
     if (window.scrollY > 50) {
       navbar.classList.add('shadow-lg', 'bg-dark-base/95');
       navbar.classList.remove('bg-dark-base/80');
     } else {
       navbar.classList.remove('shadow-lg', 'bg-dark-base/95');
       navbar.classList.add('bg-dark-base/80');
+    }
+
+    // Scroll Indicator
+    if (scrollIndicator) {
+      if (window.scrollY > 100) {
+        scrollIndicator.classList.add('opacity-0', 'pointer-events-none');
+      } else {
+        scrollIndicator.classList.remove('opacity-0', 'pointer-events-none');
+      }
     }
   });
 

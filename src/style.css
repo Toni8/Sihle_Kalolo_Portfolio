@@ -137,6 +137,15 @@
   }
 }
 
+@keyframes mouse-bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
 /* Background Particle Grid & Orbs */
 .bg-grid {
   background-size: 40px 40px;
@@ -221,4 +230,21 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-neon-blue);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  @apply fixed bottom-10 left-1/2 -translate-x-1/2 z-30 cursor-pointer transition-all duration-700;
+}
+
+.mouse-icon {
+  @apply w-6 h-10 border-2 border-white/30 rounded-full relative flex justify-center;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+  animation: mouse-bob 2s ease-in-out infinite;
+}
+
+.mouse-icon::before {
+  content: '';
+  @apply w-1 h-2 bg-neon-teal rounded-full mt-2 animate-bounce;
+  box-shadow: 0 0 10px var(--color-neon-teal);
 }
