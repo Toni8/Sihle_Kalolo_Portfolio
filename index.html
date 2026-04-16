@@ -33,11 +33,23 @@
           class="text-neon-pink">.</span></a>
 
       <!-- Desktop Menu -->
-      <div class="hidden md:flex space-x-8">
-        <a href="#about" class="text-sm font-medium hover:text-neon-blue transition-colors duration-200">The Story</a>
-        <a href="#experience" class="text-sm font-medium hover:text-neon-pink transition-colors duration-200">Impact</a>
-        <a href="#projects" class="text-sm font-medium hover:text-neon-teal transition-colors duration-200">Arsenal</a>
-        <a href="#contact" class="text-sm font-medium hover:text-white transition-colors duration-200">Connect</a>
+      <div class="hidden md:flex space-x-10">
+        <a href="#about" class="flex flex-col items-center gap-1 group text-[10px] uppercase tracking-widest font-bold text-gray-400 hover:text-neon-blue transition-all duration-300">
+          <i class="fa-solid fa-user-astronaut text-lg group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(0,163,255,0.8)] transition-all duration-300"></i>
+          <span class="opacity-70 group-hover:opacity-100 transition-opacity">The Story</span>
+        </a>
+        <a href="#experience" class="flex flex-col items-center gap-1 group text-[10px] uppercase tracking-widest font-bold text-gray-400 hover:text-neon-pink transition-all duration-300">
+          <i class="fa-solid fa-rocket text-lg group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,0,127,0.8)] transition-all duration-300"></i>
+          <span class="opacity-70 group-hover:opacity-100 transition-opacity">Impact</span>
+        </a>
+        <a href="#projects" class="flex flex-col items-center gap-1 group text-[10px] uppercase tracking-widest font-bold text-gray-400 hover:text-neon-teal transition-all duration-300">
+          <i class="fa-solid fa-terminal text-lg group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(0,242,254,0.8)] transition-all duration-300"></i>
+          <span class="opacity-70 group-hover:opacity-100 transition-opacity">Arsenal</span>
+        </a>
+        <a href="#contact" class="flex flex-col items-center gap-1 group text-[10px] uppercase tracking-widest font-bold text-gray-400 hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-paper-plane text-lg group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all duration-300"></i>
+          <span class="opacity-70 group-hover:opacity-100 transition-opacity">Connect</span>
+        </a>
       </div>
 
       <!-- Download CV Button -->
@@ -57,14 +69,21 @@
     <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu"
       class="hidden absolute top-full left-0 w-full bg-dark-surface/95 backdrop-blur-lg border-b border-white/10 shadow-xl flex-col divide-y divide-white/5">
-      <a href="#about" class="px-6 py-4 text-sm font-medium hover:text-neon-blue hover:bg-white/5 transition-colors">The
-        Story</a>
+      <a href="#about" class="px-6 py-4 text-sm font-medium flex items-center gap-3 hover:text-neon-blue hover:bg-white/5 transition-colors">
+        <i class="fa-solid fa-user-astronaut text-neon-blue w-6"></i> The Story
+      </a>
       <a href="#experience"
-        class="px-6 py-4 text-sm font-medium hover:text-neon-pink hover:bg-white/5 transition-colors">Impact</a>
+        class="px-6 py-4 text-sm font-medium flex items-center gap-3 hover:text-neon-pink hover:bg-white/5 transition-colors">
+        <i class="fa-solid fa-rocket text-neon-pink w-6"></i> Impact
+      </a>
       <a href="#projects"
-        class="px-6 py-4 text-sm font-medium hover:text-neon-teal hover:bg-white/5 transition-colors">Arsenal</a>
+        class="px-6 py-4 text-sm font-medium flex items-center gap-3 hover:text-neon-teal hover:bg-white/5 transition-colors">
+        <i class="fa-solid fa-terminal text-neon-teal w-6"></i> Arsenal
+      </a>
       <a href="#contact"
-        class="px-6 py-4 text-sm font-medium hover:text-white hover:bg-white/5 transition-colors">Connect</a>
+        class="px-6 py-4 text-sm font-medium flex items-center gap-3 hover:text-white hover:bg-white/5 transition-colors">
+        <i class="fa-solid fa-paper-plane text-white w-6"></i> Connect
+      </a>
     </div>
   </nav>
 
