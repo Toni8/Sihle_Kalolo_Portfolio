@@ -342,15 +342,6 @@
   }
 }
 
-.timeline-car {
-  @apply fixed w-10 h-10 bg-dark-base border border-neon-blue rounded-full flex items-center justify-center text-neon-blue text-lg z-[100] transition-all duration-100 ease-linear pointer-events-none;
-  box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
-  transform: translate(-50%, -50%);
-}
-
-.timeline-car i {
-  @apply animate-pulse;
-}
 
 /* Loading Skeleton */
 .skeleton {
