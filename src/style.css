@@ -343,9 +343,9 @@
 }
 
 .timeline-car {
-  @apply absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-dark-base border border-neon-blue rounded-full flex items-center justify-center text-neon-blue text-sm z-20 transition-all duration-300 ease-out;
+  @apply fixed w-10 h-10 bg-dark-base border border-neon-blue rounded-full flex items-center justify-center text-neon-blue text-lg z-[100] transition-all duration-100 ease-linear pointer-events-none;
   box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
-  transform: translate(-50%, 0) rotate(90deg); /* Face down the line */
+  transform: translate(-50%, -50%);
 }
 
 .timeline-car i {

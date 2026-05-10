@@ -198,39 +198,84 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 9. Timeline Car Movement ---
-  const timelineCar = document.getElementById('timeline-car');
-  const aboutSection = document.getElementById('about');
-  const timelineLine = document.querySelector('.timeline-line');
+  // --- 9. Timeline Person Movement ---
+  const person = document.getElementById('timeline-person');
+  const aboutSec = document.getElementById('about');
+  
+  if (person && aboutSec) {
+    const nodes = {
+      ufh: document.getElementById('node-ufh'),
+      wtc: document.getElementById('node-wtc'),
+      explore: document.getElementById('node-explore'),
+      sand: document.getElementById('node-sand')
+    };
 
-  if (timelineCar && aboutSection && timelineLine) {
     window.addEventListener('scroll', () => {
-      const sectionRect = aboutSection.getBoundingClientRect();
-      const sectionHeight = aboutSection.offsetHeight;
+      // Get positions relative to viewport
+      const rects = {
+        ufh: nodes.ufh.getBoundingClientRect(),
+        wtc: nodes.wtc.getBoundingClientRect(),
+        explore: nodes.explore.getBoundingClientRect(),
+        sand: nodes.sand.getBoundingClientRect()
+      };
+
+      // Define checkpoints in viewport space
+      // For each node, we'll aim for the center of the card
+      const points = [
+        { x: rects.ufh.left + rects.ufh.width / 2, y: rects.ufh.top + rects.ufh.height / 2 },
+        { x: rects.wtc.left + rects.wtc.width / 2, y: rects.wtc.top + rects.wtc.height / 2 },
+        { x: rects.explore.left + rects.explore.width / 2, y: rects.explore.top + rects.explore.height / 2 },
+        { x: rects.sand.left + rects.sand.width / 2, y: rects.sand.top + rects.sand.height / 2 }
+      ];
+
+      const sectionRect = aboutSec.getBoundingClientRect();
+      const sectionHeight = aboutSec.offsetHeight;
       const viewportHeight = window.innerHeight;
 
-      // Calculate progress (0 to 1) based on when the section is in view
-      // We want it to start moving when the section starts entering and finish at the bottom
-      let progress = (viewportHeight - sectionRect.top) / (sectionHeight + viewportHeight);
-      
-      // Clamp progress between 0 and 1
+      // Progress through the whole section
+      let progress = (viewportHeight/2 - sectionRect.top) / sectionHeight;
       progress = Math.max(0, Math.min(1, progress));
 
-      // Map progress to the vertical line (0% to 100% of its parent)
-      // We add a little offset to start and end at the nodes
-      const carPosition = progress * 100;
-      timelineCar.style.top = `${carPosition}%`;
-      
-      // Bonus: change car color based on progress (transitioning through theme colors)
-      if (progress < 0.3) {
-        timelineCar.style.borderColor = 'var(--color-neon-blue)';
-        timelineCar.style.color = 'var(--color-neon-blue)';
-      } else if (progress < 0.7) {
-        timelineCar.style.borderColor = 'var(--color-neon-teal)';
-        timelineCar.style.color = 'var(--color-neon-teal)';
+      // Map progress to segments
+      let targetX, targetY;
+      const numSegments = points.length - 1;
+      const segmentProgress = progress * numSegments;
+      const index = Math.floor(segmentProgress);
+      const subProgress = segmentProgress % 1;
+
+      if (index < numSegments) {
+        const p1 = points[index];
+        const p2 = points[index + 1];
+        
+        // Linear interpolation between points
+        targetX = p1.x + (p2.x - p1.x) * subProgress;
+        targetY = p1.y + (p2.y - p1.y) * subProgress;
       } else {
-        timelineCar.style.borderColor = 'var(--color-neon-pink)';
-        timelineCar.style.color = 'var(--color-neon-pink)';
+        const last = points[points.length - 1];
+        targetX = last.x;
+        targetY = last.y;
+      }
+
+      // Update person position
+      person.style.left = `${targetX}px`;
+      person.style.top = `${targetY}px`;
+      
+      // Hide if section is out of view
+      if (sectionRect.top > viewportHeight || sectionRect.bottom < 0) {
+        person.style.opacity = '0';
+      } else {
+        person.style.opacity = '1';
+      }
+
+      // Direction flip (flip icon if walking backwards)
+      if (index < numSegments) {
+         const p1 = points[index];
+         const p2 = points[index + 1];
+         if (p2.x < p1.x) {
+            person.querySelector('i').style.transform = 'scaleX(-1)';
+         } else {
+            person.querySelector('i').style.transform = 'scaleX(1)';
+         }
       }
     });
   }
