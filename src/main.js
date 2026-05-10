@@ -8,6 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
     yearSpan.textContent = new Date().getFullYear();
   }
 
+  // --- 1.5. Preloader Exit ---
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      setTimeout(() => {
+        preloader.classList.add('opacity-0', 'pointer-events-none');
+        // Optional: scale up the preloader logo on exit
+        const logo = preloader.querySelector('.preloader-logo');
+        if (logo) logo.style.transform = 'scale(1.5)';
+      }, 1500); // Give it a moment to show the dope animation
+    }
+  });
+
   // --- 2. Smooth Scrolling for Navigation Links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -65,9 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // For now, if it has opacity-0, we apply a fade in up animation
         if (entry.target.classList.contains('opacity-0')) {
           entry.target.style.animationPlayState = 'running';
-          // Fallback if animation is stripped:
-          entry.target.classList.remove('opacity-0');
-          entry.target.classList.add('animate-[fadeInUp_0.8s_ease-out_forwards]');
+          // Check if we want a specific animation like blur-in
+          if (entry.target.classList.contains('reveal-blur')) {
+            entry.target.classList.remove('opacity-0');
+            entry.target.classList.add('animate-blur-in');
+          } else {
+            entry.target.classList.remove('opacity-0');
+            entry.target.classList.add('animate-[fadeInUp_0.8s_ease-out_forwards]');
+          }
         }
 
         // Unobserve after animating if we only want it to happen once

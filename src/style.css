@@ -17,6 +17,7 @@
   --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
   --animate-pulse-glow: pulseGlow 4s ease-in-out infinite;
   --animate-drift: drift 20s linear infinite;
+  --animate-scan: scan 3s linear infinite;
 }
 
 @layer base {
@@ -103,6 +104,20 @@
 
   .btn-sweep:hover::after {
     @apply left-full;
+  }
+
+  .preloader-overlay {
+    @apply fixed inset-0 z-[9999] bg-dark-base flex items-center justify-center transition-all duration-1000;
+  }
+
+  .preloader-logo {
+    @apply text-6xl font-display font-bold text-neon-teal relative;
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+  }
+
+  .preloader-scan {
+    @apply absolute top-0 left-0 w-full h-1 bg-neon-teal/50 blur-[2px] animate-scan;
+    box-shadow: 0 0 15px var(--color-neon-teal);
   }
 }
 
@@ -224,6 +239,21 @@
   50% {
     transform: translateY(10px);
   }
+}
+
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes blur-in {
+  from { filter: blur(10px); opacity: 0; transform: scale(0.95); }
+  to { filter: blur(0); opacity: 1; transform: scale(1); }
+}
+
+.animate-blur-in {
+  animation: blur-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Background Particle Grid & Orbs */
