@@ -85,4 +85,37 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollObserver.observe(el);
   });
 
+  // --- 5. Image Gallery Logic ---
+  const galleries = document.querySelectorAll('.image-gallery');
+  galleries.forEach(gallery => {
+    const images = gallery.querySelectorAll('.gallery-image');
+    const dots = gallery.querySelectorAll('.gallery-dot');
+    let currentIndex = 0;
+
+    const showImage = (index) => {
+      images.forEach(img => img.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('bg-neon-teal', 'scale-125'));
+      dots.forEach(dot => dot.classList.add('bg-white/20'));
+
+      images[index].classList.add('active');
+      dots[index].classList.remove('bg-white/20');
+      dots[index].classList.add('bg-neon-teal', 'scale-125');
+    };
+
+    if (dots.length > 0) {
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentIndex = index;
+          showImage(currentIndex);
+        });
+      });
+
+      // Auto-switch every 5 seconds
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }, 5000);
+    }
+  });
+
 });
