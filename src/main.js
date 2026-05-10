@@ -13,11 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
       setTimeout(() => {
-        preloader.classList.add('opacity-0', 'pointer-events-none');
-        // Optional: scale up the preloader logo on exit
+        preloader.classList.add('exit');
         const logo = preloader.querySelector('.preloader-logo');
-        if (logo) logo.style.transform = 'scale(1.5)';
-      }, 1500); // Give it a moment to show the dope animation
+        const status = preloader.querySelector('.animate-pulse');
+        if (logo) {
+          logo.style.opacity = '0';
+          logo.style.transform = 'scale(1.2)';
+        }
+        if (status) status.style.opacity = '0';
+        
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 1000);
+      }, 1500);
     }
   });
 
