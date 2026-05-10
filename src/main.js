@@ -160,4 +160,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- 7. Mouse Parallax for Background Orbs ---
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5);
+    const y = (e.clientY / window.innerHeight - 0.5);
+    
+    document.querySelectorAll('.floating-orb').forEach((orb, index) => {
+      const speed = (index + 1) * 30;
+      orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+    });
+  });
+
+  // --- 8. 3D Tilt for Hero Image ---
+  const heroImage = document.querySelector('#hero-visual');
+  if (heroImage) {
+    heroImage.addEventListener('mousemove', (e) => {
+      const rect = heroImage.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const rotateX = (y - rect.height / 2) / 10;
+      const rotateY = (rect.width / 2 - x) / 10;
+      
+      heroImage.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+    
+    heroImage.addEventListener('mouseleave', () => {
+      heroImage.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale(1)`;
+    });
+  }
+
 });

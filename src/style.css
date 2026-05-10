@@ -119,6 +119,16 @@
     @apply absolute top-0 left-0 w-full h-1 bg-neon-teal/50 blur-[2px] animate-scan;
     box-shadow: 0 0 15px var(--color-neon-teal);
   }
+
+  .hero-3d-grid {
+    @apply absolute -bottom-[20%] -left-1/2 w-[200%] h-full pointer-events-none z-[-1];
+    background-image: 
+      linear-gradient(to right, rgba(0, 229, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 229, 255, 0.1) 1px, transparent 1px);
+    background-size: 60px 60px;
+    transform: perspective(800px) rotateX(60deg);
+    mask-image: linear-gradient(to bottom, transparent, black 40%, transparent);
+  }
 }
 
 /* Pseudo-class / nested rules below @layer utilities to avoid Tailwind v4 restrictions */
