@@ -198,4 +198,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- 9. Timeline Car Movement ---
+  const timelineCar = document.getElementById('timeline-car');
+  const aboutSection = document.getElementById('about');
+  const timelineLine = document.querySelector('.timeline-line');
+
+  if (timelineCar && aboutSection && timelineLine) {
+    window.addEventListener('scroll', () => {
+      const sectionRect = aboutSection.getBoundingClientRect();
+      const sectionHeight = aboutSection.offsetHeight;
+      const viewportHeight = window.innerHeight;
+
+      // Calculate progress (0 to 1) based on when the section is in view
+      // We want it to start moving when the section starts entering and finish at the bottom
+      let progress = (viewportHeight - sectionRect.top) / (sectionHeight + viewportHeight);
+      
+      // Clamp progress between 0 and 1
+      progress = Math.max(0, Math.min(1, progress));
+
+      // Map progress to the vertical line (0% to 100% of its parent)
+      // We add a little offset to start and end at the nodes
+      const carPosition = progress * 100;
+      timelineCar.style.top = `${carPosition}%`;
+      
+      // Bonus: change car color based on progress (transitioning through theme colors)
+      if (progress < 0.3) {
+        timelineCar.style.borderColor = 'var(--color-neon-blue)';
+        timelineCar.style.color = 'var(--color-neon-blue)';
+      } else if (progress < 0.7) {
+        timelineCar.style.borderColor = 'var(--color-neon-teal)';
+        timelineCar.style.color = 'var(--color-neon-teal)';
+      } else {
+        timelineCar.style.borderColor = 'var(--color-neon-pink)';
+        timelineCar.style.color = 'var(--color-neon-pink)';
+      }
+    });
+  }
+
 });
