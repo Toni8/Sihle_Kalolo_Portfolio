@@ -325,15 +325,8 @@
 }
 
 
-.timeline-line {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--color-neon-blue), var(--color-neon-pink), var(--color-neon-teal));
-  z-index: 0;
-}
+
+/* Mobile Timeline adjustment */
 
 @media (max-width: 768px) {
   .timeline-line {

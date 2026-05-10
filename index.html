@@ -177,7 +177,8 @@
           <!-- Timeline Graphic (Left Column) -->
           <div class="w-full md:w-5/12 relative pl-8 md:pl-0 sm:min-h-[400px]">
             <!-- Main timeline line -->
-            <div class="timeline-line"></div>
+            <!-- Specific Path Segments -->
+            <div class="absolute left-1/2 -translate-x-1/2 top-0 w-0.5 h-[64px] bg-gradient-to-b from-neon-blue to-neon-teal hidden md:block"></div>
 
             <div class="relative z-10 space-y-16">
               <!-- Node 1: UFH -->
@@ -196,13 +197,12 @@
 
               <!-- Node 2: The Training Split (WeThinkCode_ & ExploreAI) -->
               <div class="relative pl-0 md:pl-12 flex flex-col sm:flex-row gap-6 justify-center mt-8">
-                <!-- Branch left/right visual for desktop -->
-                <div
-                  class="hidden md:block absolute left-1/2 top-[-40px] w-[50%] h-[60px] border-l-2 border-b-2 border-t-0 border-r-0 border-neon-teal/50 rounded-bl-3xl z-0"
-                  style="left: 0;"></div>
-                <div
-                  class="hidden md:block absolute left-1/2 top-[-40px] w-[50%] h-[60px] border-r-2 border-b-2 border-t-0 border-l-0 border-neon-blue/50 rounded-br-3xl z-0">
-                </div>
+                <!-- Path from center line to WTC and ExploreAI -->
+                <div class="hidden md:block absolute left-1/2 top-[-32px] w-[25%] h-[32px] border-l-2 border-t-2 border-neon-blue/30 rounded-tl-xl" style="left: 25%;"></div>
+                <div class="hidden md:block absolute left-1/2 top-[-32px] w-[25%] h-[32px] border-r-2 border-t-2 border-neon-teal/30 rounded-tr-xl"></div>
+                
+                <!-- Horizontal connection between WTC and ExploreAI -->
+                <div class="hidden md:block absolute left-1/4 right-1/4 top-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-teal"></div>
                 <div class="w-full sm:w-1/2 relative group" id="node-wtc">
                   <div
                     class="glass-card p-5 rounded-xl text-center hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center gap-3">
@@ -223,8 +223,8 @@
                       <p class="text-neon-blue font-mono text-[11px] mt-1">Data Science</p>
                     </div>
                   </div>
-                  <!-- Connector line to Sand Tech -->
-                  <div class="hidden md:block absolute left-1/2 top-[100%] w-0.5 h-[32px] bg-gradient-to-b from-neon-blue to-neon-teal"></div>
+                  <!-- Connector line down to Sand Tech -->
+                  <div class="hidden md:block absolute left-1/2 top-[100%] w-0.5 h-[64px] bg-gradient-to-b from-neon-blue to-neon-teal"></div>
                 </div>
               </div>
 
