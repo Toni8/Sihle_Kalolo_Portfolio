@@ -118,4 +118,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // --- 6. 3D Tilt Effect for Elite Cards ---
+  const tiltCards = document.querySelectorAll('.elite-card-glow');
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = (y - centerY) / 30; // Subtle rotation
+      const rotateY = (centerX - x) / 30;
+      
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+      card.style.transition = 'none'; // Instant response on move
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)`;
+      card.style.transition = 'transform 0.5s ease'; // Smooth return
+    });
+  });
+
 });

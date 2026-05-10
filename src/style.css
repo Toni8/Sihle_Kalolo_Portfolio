@@ -65,6 +65,45 @@
   .gallery-image.active {
     @apply opacity-100;
   }
+
+  .hover-reveal-bg {
+    @apply relative overflow-hidden;
+  }
+
+  .hover-reveal-bg::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-tr from-neon-blue/20 via-transparent to-neon-pink/20 opacity-0 transition-opacity duration-500 pointer-events-none;
+  }
+
+  .hover-reveal-bg:hover::before {
+    @apply opacity-100;
+  }
+
+  .nav-link-glow {
+    @apply relative transition-colors duration-300;
+  }
+
+  .nav-link-glow::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-neon-blue to-neon-teal transition-all duration-300;
+  }
+
+  .nav-link-glow:hover::after {
+    @apply w-full shadow-[0_0_8px_rgba(0,242,254,0.8)];
+  }
+
+  .btn-sweep {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-sweep::after {
+    content: '';
+    @apply absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-20deg] transition-all duration-500;
+  }
+
+  .btn-sweep:hover::after {
+    @apply left-full;
+  }
 }
 
 /* Pseudo-class / nested rules below @layer utilities to avoid Tailwind v4 restrictions */
@@ -79,6 +118,35 @@
 .section-hover-glow:hover .line-accent {
   box-shadow: 0 0 20px var(--color-neon-pink);
   width: 6rem;
+}
+
+/* Elite Card Glow Effect */
+.elite-card-glow {
+  position: relative;
+}
+
+.elite-card-glow::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, var(--color-neon-blue), transparent, var(--color-neon-teal), transparent, var(--color-neon-pink));
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: inherit;
+  animation: borderGlow 8s linear infinite;
+}
+
+.elite-card-glow:hover::after {
+  opacity: 0.6;
+}
+
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Custom Keyframes */
