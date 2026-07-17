@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         preloader.style.display = 'none';
       }, 1000);
-    }, 100);
+    }, 4000);
   }
 
   // --- 2. Smooth Scrolling for Navigation Links ---
