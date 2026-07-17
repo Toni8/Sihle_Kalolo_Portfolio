@@ -9,25 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- 1.5. Preloader Exit ---
-  window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add('exit');
+      const logo = preloader.querySelector('.preloader-logo');
+      const status = preloader.querySelector('.animate-pulse');
+      if (logo) {
+        logo.style.opacity = '0';
+        logo.style.transform = 'scale(1.2)';
+      }
+      if (status) status.style.opacity = '0';
+      
       setTimeout(() => {
-        preloader.classList.add('exit');
-        const logo = preloader.querySelector('.preloader-logo');
-        const status = preloader.querySelector('.animate-pulse');
-        if (logo) {
-          logo.style.opacity = '0';
-          logo.style.transform = 'scale(1.2)';
-        }
-        if (status) status.style.opacity = '0';
-        
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 1000);
-      }, 1500);
-    }
-  });
+        preloader.style.display = 'none';
+      }, 1000);
+    }, 100);
+  }
 
   // --- 2. Smooth Scrolling for Navigation Links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
