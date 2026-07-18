@@ -196,4 +196,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- 9. Lightbox for Dashboard Showcase ---
+  const lightbox = document.getElementById('dashboard-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  if (lightbox && lightboxImg && lightboxTitle) {
+    const dashboardCards = document.querySelectorAll('.dashboard-card-trigger');
+    dashboardCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img');
+        const titleNode = card.nextElementSibling; // The h5 heading
+        if (img) {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          if (titleNode) {
+            lightboxTitle.textContent = titleNode.textContent;
+          } else {
+            lightboxTitle.textContent = img.alt;
+          }
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+          document.body.style.overflow = 'hidden'; // Disable scroll
+        }
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.body.style.overflow = '';
+      lightboxImg.src = '';
+    };
+
+    lightbox.addEventListener('click', closeLightbox);
+    if (lightboxClose) {
+      lightboxClose.addEventListener('click', closeLightbox);
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+        closeLightbox();
+      }
+    });
+  }
+
 });
