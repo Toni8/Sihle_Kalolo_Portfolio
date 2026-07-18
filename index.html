@@ -453,7 +453,10 @@
         </div>
 
         <!-- FLAGSHIP PROJECT HERO -->
-        <div class="glass-card rounded-2xl p-8 lg:p-12 mb-16 relative overflow-hidden group">
+        <div class="glass-card rounded-2xl p-8 lg:p-12 mb-16 relative overflow-hidden group border border-neon-teal/10 hover:border-neon-teal/30 transition-all duration-500">
+          <!-- Side glow orbs -->
+          <div class="absolute -left-10 top-1/2 -translate-y-1/2 w-20 h-40 bg-neon-teal/25 rounded-full blur-2xl animate-pulse pointer-events-none"></div>
+          <div class="absolute -right-10 top-1/2 -translate-y-1/2 w-20 h-40 bg-neon-blue/25 rounded-full blur-2xl animate-pulse pointer-events-none" style="animation-delay:1s"></div>
           <div class="absolute -right-20 -top-20 w-64 h-64 bg-neon-teal/10 rounded-full blur-3xl group-hover:bg-neon-teal/20 transition-all duration-700"></div>
           
           <div class="flex flex-col lg:flex-row gap-12 items-center relative z-10">
@@ -799,11 +802,13 @@
 
         <!-- INTERACTIVE DEMO CTA -->
         <div class="mb-12 text-center">
-          <div class="glass-card p-10 lg:p-16 rounded-3xl relative overflow-hidden group">
+          <div class="glass-card p-10 lg:p-16 rounded-3xl relative overflow-hidden group border border-neon-blue/10 hover:border-neon-blue/30 transition-all duration-500">
             <div class="absolute inset-0 bg-gradient-to-br from-neon-blue/10 via-transparent to-neon-pink/10 opacity-50"></div>
             <div class="absolute -top-32 -left-32 w-64 h-64 bg-neon-blue/20 rounded-full blur-[100px]"></div>
             <div class="absolute -bottom-32 -right-32 w-64 h-64 bg-neon-pink/20 rounded-full blur-[100px]"></div>
-            
+            <!-- Side glow orbs -->
+            <div class="absolute -left-8 top-1/2 -translate-y-1/2 w-16 h-48 bg-neon-blue/30 rounded-full blur-2xl animate-pulse pointer-events-none"></div>
+            <div class="absolute -right-8 top-1/2 -translate-y-1/2 w-16 h-48 bg-neon-pink/30 rounded-full blur-2xl animate-pulse pointer-events-none" style="animation-delay:1.2s"></div>
             <div class="relative z-10 max-w-3xl mx-auto">
               <h3 class="text-3xl font-display font-bold text-white mb-4">Experience the Dashboard</h3>
               <p class="text-gray-300 text-lg mb-8 leading-relaxed">
@@ -1165,8 +1170,11 @@
           </div>
 
           <!-- WeThinkCode_ -->
-          <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+          <div class="glass-card rounded-2xl p-8 relative overflow-hidden group border border-neon-pink/10 hover:border-neon-pink/30 transition-all duration-500">
             <div class="absolute top-0 left-0 w-1 h-full bg-neon-pink"></div>
+            <!-- Side glow orbs -->
+            <div class="absolute -left-8 top-1/2 -translate-y-1/2 w-16 h-40 bg-neon-pink/25 rounded-full blur-2xl animate-pulse pointer-events-none"></div>
+            <div class="absolute -right-8 top-1/2 -translate-y-1/2 w-16 h-40 bg-neon-pink/20 rounded-full blur-2xl animate-pulse pointer-events-none" style="animation-delay:0.8s"></div>
             <div class="flex flex-col md:flex-row gap-6 justify-between md:items-center mb-4">
               <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rounded bg-white p-1 flex items-center justify-center shrink-0">
@@ -1242,7 +1250,7 @@
         </div>
 
         <div class="flex justify-center gap-6">
-          <a href="https://github.com/Toni8?tab=repositories" target="_blank"
+          <a href="https://github.com/Toni8" target="_blank"
             class="w-16 h-16 rounded-full glass-card flex items-center justify-center text-gray-300 hover:text-white hover:border-neon-pink hover:shadow-[0_0_20px_rgba(255,0,127,0.4)] hover:-translate-y-1 transition-all">
             <i class="fa-brands fa-github text-3xl"></i>
           </a>
